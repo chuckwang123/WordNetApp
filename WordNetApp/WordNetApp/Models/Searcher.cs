@@ -12,7 +12,7 @@ namespace WordNetApp.Models
 {
     public class Searcher
     {
-        public static List<IndexEntry> Search(string queryString)
+        public static List<string> Search(string queryString)
         {
             ISynonymEngine synonymEngine = new WordNetSynonymEngine(@"C:\Users\jwang\Source\Repos\WordNetApp\WordNetApp\WordNetApp\App_Data\syn_index");
             var analyzer = new SynonymAnalyzer(synonymEngine);
@@ -20,27 +20,18 @@ namespace WordNetApp.Models
             var indexDir = FSDirectory.Open(new DirectoryInfo(@"C:\Users\jwang\Source\Repos\WordNetApp\WordNetApp\WordNetApp\App_Data\syn_index"));
             var searcher = new IndexSearcher(indexDir, true);
 
-            var parser = new QueryParser(Version.LUCENE_29, "content", analyzer);
+            var parser = new QueryParser(Version.LUCENE_29, "word", analyzer);
 
             var query = parser.Parse(queryString);
 
-            var hits = searcher.Search(query,Sort.RELEVANCE);
-            var entries = new List<IndexEntry>();
-
-            var simpleHtmlFormatter = new SimpleHTMLFormatter("<span style='background-color:#23dc23;color:white'>", "</span>");
-            var highlighter = new Highlighter(simpleHtmlFormatter, new QueryScorer(query));
-
-            highlighter.SetTextFragmenter(new SimpleFragmenter(256));
-            highlighter.SetMaxDocBytesToAnalyze(int.MaxValue);
-
-            var standAnalyzer = new StandardAnalyzer();
+            var hits = searcher.Search(query);
+            var entries = new List<string>();
 
             for (var i = 0; i < hits.Length(); i++)
             {
                 var doc = hits.Doc(i);
-                var fragment = highlighter.GetBestFragment(standAnalyzer, "content", doc.Get("content"));
 
-                var entry = new IndexEntry(doc.Get("file"), fragment);
+                var entry = doc.Get("word");
                 entries.Add(entry);
             }
 

@@ -8,9 +8,9 @@ namespace WordNetApp.Controllers
     public class WordController : ApiController
     {
         [Route("")]
-        public IEnumerable<IndexEntry> GetSynonym()
+        public IEnumerable<string> GetSynonym(string word)
         {
-            return Searcher.Search("heart");
+            return Searcher.Search(word);
         }
     }
 }

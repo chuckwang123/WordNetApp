@@ -152,6 +152,7 @@
     <Compile Include="Models\SynonymFilter.cs" />
     <Compile Include="Models\WordNetSynonymEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\BrowserJsonFormatter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

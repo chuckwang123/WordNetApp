@@ -43,6 +43,54 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Lucene.Net, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lucene.Net.3.0.3\lib\NET40\Lucene.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Lucene.Net.Contrib.Analyzers, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lucene.Net.Contrib.3.0.3\lib\net40\Lucene.Net.Contrib.Analyzers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Lucene.Net.Contrib.Core, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lucene.Net.Contrib.3.0.3\lib\net40\Lucene.Net.Contrib.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Lucene.Net.Contrib.FastVectorHighlighter, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lucene.Net.Contrib.3.0.3\lib\net40\Lucene.Net.Contrib.FastVectorHighlighter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Lucene.Net.Contrib.Highlighter, Version=2.3.2.1, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lucene.Net.Contrib.3.0.3\lib\net40\Lucene.Net.Contrib.Highlighter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Lucene.Net.Contrib.Memory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lucene.Net.Contrib.3.0.3\lib\net40\Lucene.Net.Contrib.Memory.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Lucene.Net.Contrib.Queries, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lucene.Net.Contrib.3.0.3\lib\net40\Lucene.Net.Contrib.Queries.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Lucene.Net.Contrib.Regex, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lucene.Net.Contrib.3.0.3\lib\net40\Lucene.Net.Contrib.Regex.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Lucene.Net.Contrib.SimpleFacetedSearch, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lucene.Net.Contrib.3.0.3\lib\net40\Lucene.Net.Contrib.SimpleFacetedSearch.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Lucene.Net.Contrib.Snowball, Version=2.0.0.1, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lucene.Net.Contrib.3.0.3\lib\net40\Lucene.Net.Contrib.Snowball.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Lucene.Net.Contrib.SpellChecker, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lucene.Net.Contrib.3.0.3\lib\net40\Lucene.Net.Contrib.SpellChecker.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.2\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -82,6 +130,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\prolog\prologdb.5WN.html" />
+    <Content Include="App_Data\prolog\senseidx.5WN.html" />
+    <Content Include="App_Data\prolog\wndb.5WN.html" />
+    <Content Include="App_Data\prolog\wngroups.7WN.html" />
+    <Content Include="App_Data\prolog\wninput.5WN.html" />
+    <Content Include="App_Data\prolog\wnpkgs.7WN.html" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -97,6 +151,49 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="App_Data\prolog\prologdb.5" />
+    <Content Include="App_Data\prolog\prologdb.5.pdf" />
+    <Content Include="App_Data\prolog\prologdb.5.ps" />
+    <Content Include="App_Data\prolog\senseidx.5" />
+    <Content Include="App_Data\prolog\senseidx.5.pdf" />
+    <Content Include="App_Data\prolog\senseidx.5.ps" />
+    <Content Include="App_Data\prolog\wndb.5" />
+    <Content Include="App_Data\prolog\wndb.5.pdf" />
+    <Content Include="App_Data\prolog\wndb.5.ps" />
+    <Content Include="App_Data\prolog\wngroups.7" />
+    <Content Include="App_Data\prolog\wngroups.7.pdf" />
+    <Content Include="App_Data\prolog\wngroups.7.ps" />
+    <Content Include="App_Data\prolog\wninput.5" />
+    <Content Include="App_Data\prolog\wninput.5.pdf" />
+    <Content Include="App_Data\prolog\wninput.5.ps" />
+    <Content Include="App_Data\prolog\wnpkgs.7" />
+    <Content Include="App_Data\prolog\wnpkgs.7.pdf" />
+    <Content Include="App_Data\prolog\wnpkgs.7.ps" />
+    <Content Include="App_Data\prolog\wn_ant.pl" />
+    <Content Include="App_Data\prolog\wn_at.pl" />
+    <Content Include="App_Data\prolog\wn_cls.pl" />
+    <Content Include="App_Data\prolog\wn_cs.pl" />
+    <Content Include="App_Data\prolog\wn_der.pl" />
+    <Content Include="App_Data\prolog\wn_ent.pl" />
+    <Content Include="App_Data\prolog\wn_fr.pl" />
+    <Content Include="App_Data\prolog\wn_g.pl" />
+    <Content Include="App_Data\prolog\wn_hyp.pl" />
+    <Content Include="App_Data\prolog\wn_ins.pl" />
+    <Content Include="App_Data\prolog\wn_mm.pl" />
+    <Content Include="App_Data\prolog\wn_mp.pl" />
+    <Content Include="App_Data\prolog\wn_ms.pl" />
+    <Content Include="App_Data\prolog\wn_per.pl" />
+    <Content Include="App_Data\prolog\wn_ppl.pl" />
+    <Content Include="App_Data\prolog\wn_s.pl" />
+    <Content Include="App_Data\prolog\wn_sa.pl" />
+    <Content Include="App_Data\prolog\wn_sim.pl" />
+    <Content Include="App_Data\prolog\wn_sk.pl" />
+    <Content Include="App_Data\prolog\wn_syntax.pl" />
+    <Content Include="App_Data\prolog\wn_vgp.pl" />
+    <Content Include="App_Data\syn_index\segments.gen" />
+    <Content Include="App_Data\syn_index\segments_2" />
+    <Content Include="App_Data\syn_index\_0.cfs" />
+    <Content Include="App_Data\syn_index\_0.cfx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -105,7 +202,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
